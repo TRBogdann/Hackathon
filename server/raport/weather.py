@@ -1,17 +1,16 @@
 import requests
 import json
 
-# lat = 44.4309909
-# lng = 26.1097773
+
 message_w = ""
-# location = "bucuresti"
+
 
 
 ############################################
 ##############################################
 
 def air_q(lat, lng):
-    url = 'https://airquality.googleapis.com/v1/currentConditions:lookup?key=AIzaSyAbIP7DzmjSr0vta5i4dcDA9_8deC9ruXk'
+    url = 'https://airquality.googleapis.com/v1/currentConditions:lookup?key=API_KEY'
     headers = {'Content-Type': 'application/json'}
     data = {
         "location": {
@@ -38,13 +37,13 @@ def mail():
     URL_ADP = "https://www.pmb.ro/subordonate/administratii/menu-page/2"
 
     port = 587
-    password = "kndvhremlmvewufj"
-    my_mail = "zoicatrade@gmail.com"
+    password = PASSWORD
+    my_mail = EMAIL
 
     # Create a multipart message
     msg = MIMEMultipart()
     msg['From'] = my_mail
-    msg['To'] = "eduardmusic12@gmail.com"
+    msg['To'] = EMAIL2
     msg['Subject'] = "GreenPath!"
 
     # Attach the text part
@@ -72,7 +71,7 @@ def wheather_check(lat,lng):
     global message_w
 
     api_endpoint = "https://api.openweathermap.org/data/3.0/onecall"
-    api_key = "40aed1c3553094108ea8f9c83af1bdad"
+    api_key = KEY
     latit = lat
     longi = lng
 
@@ -106,13 +105,13 @@ def wheather_check(lat,lng):
 def sms(location, message_w):
     from twilio.rest import Client
     message = f"Constatarea dvs ce se afla :{location}, a ajuns la  noi,\nin cel ma scurt timp ne vom ocupa de problema!\n\nPentru ca faptele bune sunt rasplatite ,\nintra pe mail si vezi ce cadouri ti-am pregatit!\n\n{message_w}"
-    account_sid = 'ACbf1fe13d076ad16a26389696e4ab2cbc'
-    auth_token = '7b2138c4c89cf3964ca5dc3b37473802'
+    account_sid = SID
+    auth_token = TOKEN
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         from_='+12292672147',
         body=message,
-        to='+40726608693')
+        to=PHONE_NR)
     print(message.sid)
 
 
