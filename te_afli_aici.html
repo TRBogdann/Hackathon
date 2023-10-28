@@ -73,6 +73,15 @@
             handleLocationError(false, infoWindow, map.getCenter());
           }
 
+          const finalizeButton = document.createElement("button");
+          finalizeButton.textContent = "Finalizare";
+          finalizeButton.classList.add("custom-map-control-button");
+
+          map.controls[google.maps.ControlPosition.TOP_CENTER].push(finalizeButton);
+
+          finalizeButton.addEventListener("click", () => {
+            window.location.href = "https://www.example.com"; // replace with your URL
+          });
 
         });
       }
