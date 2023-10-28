@@ -1,4 +1,5 @@
  import React,{useState} from "react"
+ import "./SignUp.css"
 
  function SignUp()
  {  
@@ -9,7 +10,7 @@
         password:'',
     }
     );
-    const [mess,sertMess]=useState({
+    const [mess,setMess]=useState({
         username:'',
         password:'',
     }
@@ -40,7 +41,7 @@
 
         const request=new XMLHttpRequest();
 
-        request.open("POST","http://127.0.0.1:8000/raport/signup/"   );
+        request.open("POST","http://127.0.0.1:8000/raport/signup/");
 
         request.onload=function ()
     {
@@ -53,17 +54,21 @@
     
     return(
       <>
+      <div className="sdata">
         <form onSubmit={e=>{sendForm(e)}}>
+        <div className="ti"> Sign Up Here</div>
         <label>
-            Username:
+            Username<br></br>
             <input className="usr" name="username" type="text" onChange={e=>updateForm("username",e)}/>
         </label>
         <label>
-            Password:
-            <input className="password" name="password" type="password" onChange={e=>updateForm("password",e)}/>
+            Password<br></br>
+            <input className="pass" name="password" type="password" onChange={e=>updateForm("password",e)}/>
         </label>
-        <input type="submit" value="Sign Up"/>
+        <input className="sub" type="submit" value="Sign Up"/>
+        
         </form>
+        </div>
       </>
     );
  }

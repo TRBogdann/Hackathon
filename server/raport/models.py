@@ -10,9 +10,15 @@ class Users(models.Model):
 class raport(models.Model):
     report_id=models.IntegerField(primary_key=1)
     user_id=models.IntegerField(models.ForeignKey(Users, to_field='user_id', on_delete=models.CASCADE))
-    geocode=models.CharField(max_length=200)
+    strada=models.CharField(max_length=200)
+    lat=models.CharField(max_length=200)
+    lng=models.CharField(max_length=200)
     path_to_Photo=models.CharField(max_length=200)
     description=models.CharField(max_length=100)
+
+class UserSession(models.Model):
+    session_id=models.CharField(max_length=100)
+    user_id=models.IntegerField(models.ForeignKey(Users, to_field='user_id', on_delete=models.CASCADE))
 
 
 

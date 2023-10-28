@@ -1,0 +1,70 @@
+
+.sdata
+{
+position: absolute;
+top:10vh;
+left:35vw;
+ display:flex;
+ background-image: linear-gradient( to right, #ff512f, #f09819);
+ width:30vw;
+ height:70vh;
+ border-radius:25px;
+ color:white;
+}
+
+.sdata>form{
+    display:flex;
+    flex-direction: column;
+    
+}
+.sdata>form>label
+{
+font-weight: 510;
+margin-left:2.5vw;;
+}
+
+.usr
+{
+height: 5vh;
+width:25vw;
+border-radius:10px;
+border-style:none;
+background-color: rgba(255,255,255,0.07);
+margin-bottom:2vw;
+
+}
+
+.pass
+{   
+    height: 5vh;
+    width:25vw;
+    border-radius:10px;
+    border-style:none;
+    background-color: rgba(255,255,255,0.07)
+    
+}
+.ti
+{
+font-weight: 600;
+font-size:2.5vw;
+width:30vw;
+margin-top:10vh;
+text-align:center;
+margin-bottom:4vw;
+}
+.sub
+{   margin-top:5vw;
+    margin-left:9vw;
+    width:11vw;
+    height:5.5vh;
+    border-style:none;
+    border-radius:12px;
+    background-color: #ffffff;
+   
+    color: #080710;
+  
+}
+.sub:hover
+{
+    background-color:#696767;;
+}
