@@ -115,4 +115,11 @@ def view_finalizare(request):
     print(element.lat)
     return render(request,"finalizare.html")
     
+@csrf_exempt
+def get_data(request):
+    arr=[]
+    for obj in raport.objects.all():
+        arr.append({obj.strada,obj.lat,obj.lng,obj.description})
+    print(arr)
+    return arr
 

@@ -18,7 +18,7 @@ function Home()
       <div className="t2">Raporteaza o problema</div>
       </div>
       <div>
-      <a href="/"><img className="i1" alt="img" src={serverLogo}></img></a>
+      <a href="/data"><img className="i1" alt="img" src={serverLogo}></img></a>
       <div className="t2">Date</div>
       </div>
       </div>

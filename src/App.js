@@ -4,6 +4,7 @@ import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import LogInForm from './pages/Login';
 import Raport from './pages/Raport';
+import Data from './pages/Date'
 
 function App(){
 
@@ -25,6 +26,10 @@ let currentPage;
       case "/raportare":
         currentPage=<Raport/>
           break;
+      
+          case "/data":
+            currentPage=<Data/>
+              break;
 
     default:
       currentPage=<Home/>;

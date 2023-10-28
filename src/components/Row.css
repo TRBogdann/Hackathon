@@ -1,0 +1,14 @@
+
+.row
+{
+	width:100vw;
+	height:10vh;
+	background-color:white;
+	color: black;
+}
+
+.row>div
+{
+	width:25vw;
+	border:solid black 2px;
+}
